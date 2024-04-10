@@ -22,7 +22,7 @@ function Checkbox({ label, onChange }) {
 
   return (
     <View style={styles.checkboxContainer}>
-      <Pressable style={styles.checkbox} onPress={handleCheckboxChange}>
+      <Pressable style={styles.checkbox} onPress={handleCheckboxChange}> 
         {checked ? (
           <Ionicons name="checkbox-outline" size={24} color="coral" />
         ) : (

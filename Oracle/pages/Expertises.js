@@ -10,7 +10,7 @@ export default function Expertises() {
     <View style={styles.container}>
       <View style={{alignItems: 'center'}}>
         <Text style={styles.heading}>Cristiano Ronaldo</Text>
-        <Text style={styles.subheading}>Parceiro nível - abluble</Text>
+        <Text style={styles.subheading}>Parceiro nível - inciante</Text>
       </View>
 
       <View>
@@ -19,6 +19,7 @@ export default function Expertises() {
         <Checkbox label="Expertise 3" onChange={handleCheckboxChange} />
         <Checkbox label="Expertise 4" onChange={handleCheckboxChange} />
       </View>
+<Button>add expertises<Button>
     </View>
   );
 }

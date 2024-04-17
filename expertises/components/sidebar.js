@@ -8,14 +8,14 @@ import Excluir from "../pages/Excluir";
 import Expertises from "../pages/Expertises";
 import Informacoes from "../pages/Informacoes";
 
-const Drawer = createDrawerNavigator();
+const Drawer = createDrawerNavigator(); // essa biblioteca drawer vai funcionar como o react dom que faz as rotas
 
 export default function Sidebar() {
   
-  return (
-    <NavigationContainer>
+  return ( 
+    <NavigationContainer> 
       <Drawer.Navigator
-        screenOptions={{
+        screenOptions={{ //navibar para abrir o projeto
           drawerStyle: {
             backgroundColor: "#B90E1E",
             width: 250,
@@ -33,15 +33,13 @@ export default function Sidebar() {
           },
         }}
       >
-      <Drawer.Screen
+      <Drawer.Screen // rotas das paginas
         name="Relatorio"
         component={Relatorio}
-        options={{
+        options={{ // aparecer escrito no sidebar
           drawerLabel: "Relatorio",
           title: "Oracle",
-          // drawerActiveTintColor: '#fff', 
-          // drawerActiveBackgroundColor: '#68f', 
-          drawerIcon: () => (
+          drawerIcon: () => ( // vai realizar as trocas de paginas
             <FontAwesome name="pencil-square" size={20} color="#fff" />
           )
         }}

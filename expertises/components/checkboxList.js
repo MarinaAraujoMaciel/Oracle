@@ -4,34 +4,35 @@ import { Ionicons } from '@expo/vector-icons';
 import moment from 'moment';
 
 function Checkbox({ label, onChange }) {
-  const [checked, setChecked] = useState(false);
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [checked, setChecked] = useState(false); // verificar se apliquei ou nao no checkbox e inicia como falso
+  const [selectedDate, setSelectedDate] = useState(null); //verificar a data que foi realizada a função
+// moment realiza essa função da data, como??? 
 
-  const handleCheckboxChange = () => {
+  const handleCheckboxChange = () => { // vai mudar o estado do checkbox
     const newChecked = !checked;
     setChecked(newChecked);
     if (newChecked) {
-      setSelectedDate(moment().format('DD/MM/YYYY'));
+      setSelectedDate(moment().format('DD/MM/YYYY')); // vai setar a data atual se for ativo
     } else {
-      setSelectedDate(null);
+      setSelectedDate(null); // se nao fica nulo
     }
     if (onChange) {
       onChange(newChecked);
     }
   };
 
-  return (
-    <View style={styles.checkboxContainer}>
-      <Pressable style={styles.checkbox} onPress={handleCheckboxChange}> 
+  return ( 
+    <View style={styles.checkboxContainer}> 
+      <Pressable /* botao apertavel */style={styles.checkbox} onPress={handleCheckboxChange}> 
         {checked ? (
-          <Ionicons name="checkbox-outline" size={24} color="coral" />
+          <Ionicons name="checkbox-outline" size={24} color="coral" /> // se estiver ativo check ele vai renderizar o icone
         ) : (
-          <Ionicons name="square-outline" size={24} color="coral" />
+          <Ionicons name="square-outline" size={24} color="coral" /> // se nao estiver ativo fica caixa vazia
         )}
-        <Text style={styles.checkboxLabel}>{label}</Text>
+        <Text style={styles.checkboxLabel}>{label}</Text> 
       </Pressable>
       {checked && selectedDate && (
-        <Text style={styles.dateText}>{selectedDate}</Text>
+        <Text style={styles.dateText}>{selectedDate}</Text> /* se ativo mostra a data atual com o texto de completo expertise */
       )}
     </View>
   );

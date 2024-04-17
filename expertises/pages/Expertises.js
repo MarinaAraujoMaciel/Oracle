@@ -1,8 +1,11 @@
 import { View, Text, StyleSheet } from 'react-native';
 import Checkbox from '../components/checkboxList';
 
+
+// exportando tudo da pagina do checkbox para a pagina de expertises
+
 export default function Expertises() {
-  const handleCheckboxChange = (isChecked) => {
+  const handleCheckboxChange = (isChecked) => { // mostra as expertises concluidas
     console.log('Checkbox marcado:', isChecked);
   };
 
@@ -19,7 +22,7 @@ export default function Expertises() {
         <Checkbox label="Expertise 3" onChange={handleCheckboxChange} />
         <Checkbox label="Expertise 4" onChange={handleCheckboxChange} />
       </View>
-<Button>add expertises<Button>
+
     </View>
   );
 }
